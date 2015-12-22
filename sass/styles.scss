@@ -1,5 +1,53 @@
 body {
+  margin: 0;
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    height: 60px;
+
+    #menu {
+      border: 1px solid black;
+      font-size: 30px;
+      margin: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  #navBar {
+    background-color: #333333;
+    margin: 0;
+    height: 60px;
+    display: flex;
+
+    li {
+      font-family: "Oswald", sans-serif;
+      font-size: 30px;
+      color: #a6a6a6;
+      display: flex;
+
+      align-items: center;
+      border-left: 1px solid #a6a6a6;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    li:hover {
+      color: #ff9933;
+    }
+
+    li:first-child {
+      border-left: none;
+    }
+  }
+
   h1 {
     background-color: #fff;
   }
+
+  // #bottomBar {
+  //   background-color:
+  // }
 }

@@ -1,3 +1,25 @@
+// PROCESS
+// 1. Set basic variables & media query ranges
+// 2. Style large blocks with bg colors for layout
+// 3. Get general layout elements (block) sized for all media queries
+// 4. Modify general layout elements with &
+// 5. Secondary features grid (S --> L)
+// 6. Typography & Image Sizes
+// 7. Refactor the SCSS to make it dryer & simpler.
+// 8. Set variables for common values.
+
+
+// RESETS & FRAMEWORKS
+@import "partials/reset";
+
+// VARIABLES & MIXINS
+
+// MEDIA QUERY RANGES
+$medium: "only screen and (min-width:600px)";
+$large: "only screen and (min-width:900px)";
+
+// GENERAL STYLES
+
 body {
   margin: 0;
 
@@ -21,25 +43,26 @@ body {
     margin: 0;
     height: 60px;
     display: flex;
+    justify-content: center;
 
-    li {
+    .navBarList {
       font-family: "Oswald", sans-serif;
       font-size: 30px;
       color: #a6a6a6;
       display: flex;
-
       align-items: center;
+
       border-left: 1px solid #a6a6a6;
       padding-left: 10px;
       padding-right: 10px;
     }
 
-    li:hover {
-      color: #ff9933;
+    .navBarList:first-child {
+      border-left: none;
     }
 
-    li:first-child {
-      border-left: none;
+    .navBarList:hover {
+      color: #ff9933;
     }
   }
 

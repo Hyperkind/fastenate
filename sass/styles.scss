@@ -19,6 +19,10 @@ $medium: "only screen and (min-width:600px)";
 $large: "only screen and (min-width:900px)";
 
 // GENERAL STYLES
+*{
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -33,6 +37,7 @@ body {
     display: flex;
     // justify-content: center;
     background-color: #ffffff;
+    width: 100%;
     height: 60px;
 
     #emptyHeader {
@@ -79,6 +84,7 @@ body {
 
   #navBar {
     background-color: #404040;
+    width: 100%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -96,14 +102,14 @@ body {
       @media #{$medium}{
         border: none;
       }
-    }
 
-    .navBarList:first-child {
-      border-left: none;
-    }
+      &:first-child {
+        border-left: none;
+      }
 
-    .navBarList:hover {
-      color: #ff9933;
+      &:hover {
+        color: #ff9933;
+      }
     }
   }
 
@@ -111,16 +117,32 @@ body {
     display: flex;
     flex-flow: column wrap;
 
-    #story {
-      background-color: #ffffff;
-      font-size: 20px;
-      margin: 10px;
-      padding: 20px;
-      flex: 0 0 100%;
+    @media #{$medium}{
+      margin: 35px;
     }
 
-    #story:hover {
-      border: 5px solid #ff9933;
+    // @media #{$large}{
+    //   margin: 90px;
+    // }
+
+    .story {
+      background-color: #ffffff;
+      margin: 10px;
+      // padding: 20px;
+      // flex: 0 0 100%;
+
+      &:hover {
+        border: 5px solid #ff9933;
+      }
+
+      .thumbnail {
+        width: 100%
+      }
+
+      .storyText {
+        display: block;
+        font-size: 20px;
+      }
     }
   }
 
